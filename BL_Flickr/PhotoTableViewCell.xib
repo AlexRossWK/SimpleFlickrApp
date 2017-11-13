@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="179" id="KGk-i7-Jjw" customClass="PhotoTableViewCell" customModule="BL_Flickr" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="178.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nZF-JK-Pxa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="999" constant="140" identifier="Высота фото" id="Lkm-hE-Nf2"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06h-tg-ztQ">
+                        <rect key="frame" x="8" y="148" width="304" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaA-kQ-tvk">
+                        <rect key="frame" x="8" y="118" width="42" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nZF-JK-Pxa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" identifier="Фото к верху" id="0xY-Cg-dOa"/>
+                    <constraint firstItem="nZF-JK-Pxa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" identifier="Фото влево" id="1RB-fc-iII"/>
+                    <constraint firstItem="06h-tg-ztQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" identifier="Тайтл влево" id="GaI-Wv-ZII"/>
+                    <constraint firstItem="WaA-kQ-tvk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="PcV-oz-sfS"/>
+                    <constraint firstItem="06h-tg-ztQ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" identifier="Тайтл вправо" id="VCr-JQ-Gak"/>
+                    <constraint firstAttribute="trailing" secondItem="nZF-JK-Pxa" secondAttribute="trailing" identifier="Фото вправо" id="jhj-gV-D69"/>
+                    <constraint firstItem="06h-tg-ztQ" firstAttribute="top" secondItem="nZF-JK-Pxa" secondAttribute="bottom" constant="8" identifier="Тайтл к фотке вверх" id="lqO-B1-BbY"/>
+                    <constraint firstItem="06h-tg-ztQ" firstAttribute="top" secondItem="WaA-kQ-tvk" secondAttribute="bottom" constant="12" id="uJA-PF-wQP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="WaA-kQ-tvk" secondAttribute="trailing" constant="262" id="uWU-3r-V8z"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="06h-tg-ztQ" secondAttribute="bottom" constant="2" id="x4Q-hc-vFW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="favoritesLabel" destination="WaA-kQ-tvk" id="Ams-3c-LXk"/>
+                <outlet property="photoHeightConstraint" destination="Lkm-hE-Nf2" id="MoQ-Es-FdM"/>
+                <outlet property="photoImageView" destination="nZF-JK-Pxa" id="QXG-qk-oeY"/>
+                <outlet property="titleLabel" destination="06h-tg-ztQ" id="qt8-cT-c3E"/>
+            </connections>
+            <point key="canvasLocation" x="16" y="38.5"/>
+        </tableViewCell>
+    </objects>
+</document>
